@@ -1,103 +1,481 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+"use client";
 import Image from "next/image";
+import { useState } from "react";
+import Link from "next/link";
+import { useRef } from "react";
+
+//import { usePathname } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [greaterThanSign, setGreaterThanSign] = useState("＞");
+  //so i can copy and paste the greater than symbolnon my about paragraph
+  const targetRef = useRef<HTMLDivElement | null>(null);
+  //telling typescript what type im expecting out of useRef
+  //const [projectRef, setProjectRef] = useState('')
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const scrollToElement = () => {
+    targetRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  type SpanStyle = {
+    color: string;
+  };
+
+  const spanColour: SpanStyle = {
+    color: "#4169e1",
+  };
+
+  return (
+    <>
+      <div className="home-container">
+        <h2>Hello, I am Branell. This is my portfolio.</h2>
+        <h1>
+          Front End <span style={spanColour}>developer</span>
+        </h1>
+        <button onClick={scrollToElement}>View my work</button>
+      </div>
+
+      <div className="about-container" ref={targetRef}>
+        <h1>About</h1>
+
+        <div className="about-icons">
+          <div className="red"></div>
+          <div className="orange"></div>
+          <div className="green"></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="about-me">
+          <p>
+            {greaterThanSign}Branell.location <br />
+            'Elche, Spain'
+          </p>
+
+          <p>
+            {greaterThanSign}Branell.contact <br /> ['
+            <a
+              href="mailto:branellk@gmail.com?subject=Hello&body=I'd love to connect!"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              branellk@gmail.com
+            </a>
+            ' , '<Link href="https://github.com/BranellKaunda">github</Link>', '
+            <Link href="https://www.instagram.com/braneldo">instagram</Link>']
+          </p>
+
+          <p>
+            {greaterThanSign}Branell.interests <br />
+            ['football', 'piano', 'working out', 'video games']
+          </p>
+
+          <p className="typing-symbol">{greaterThanSign}</p>
+        </div>
+      </div>
+
+      <div className="technologies-header">
+        <h1>Technologies</h1>
+      </div>
+
+      <div className="technologies-container">
+        <div className="technologies-1">
+          <div className="tech-wrapper">
+            <h2>React</h2>
+
+            <div className="img-div">
+              <Image
+                src="/images/react-logo.png"
+                alt="react logo"
+                priority={true}
+                width={50}
+                height={50}
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </div>
+
+          <div className="plus-1">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-2">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-3">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-4">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+        </div>
+
+        <div className="technologies-2">
+          <div className="tech-wrapper">
+            <h2>Nextjs</h2>
+
+            <div className="img-div">
+              <Image
+                src="/images/nextjs.png"
+                alt="react logo"
+                priority={true}
+                width={50}
+                height={50}
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </div>
+
+          <div className="plus-1">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-2">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-3">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-4">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+        </div>
+
+        <div className="technologies-3">
+          <div className="tech-wrapper">
+            <h2>Typescript</h2>
+
+            <div className="img-div">
+              <Image
+                src="/images/typescript.png"
+                alt="react logo"
+                priority={true}
+                width={50}
+                height={50}
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </div>
+
+          <div className="plus-1">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-2">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-3">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-4">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+        </div>
+
+        <div className="technologies-4">
+          <div className="tech-wrapper">
+            <h2>Tailwind CSS</h2>
+
+            <div className="img-div">
+              <Image
+                src="/images/tailwindcss.png"
+                alt="react logo"
+                priority={true}
+                width={50}
+                height={50}
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </div>
+
+          <div className="plus-1">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-2">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-3">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-4">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+        </div>
+
+        <div className="technologies-5">
+          <div className="tech-wrapper">
+            <h2>Git</h2>
+
+            <div className="img-div">
+              <Image
+                src="/images/git.png"
+                alt="react logo"
+                priority={true}
+                width={50}
+                height={50}
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </div>
+
+          <div className="plus-1">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-2">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-3">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+
+          <div className="plus-4">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="projects-header">
+        <h1>Projects</h1>
+      </div>
+
+      <div className="projects-container">
+        <div className="project">
+          <div className="project-info">
+            <div className="project-img">
+              <img src="/images/bmklogistics.png" alt="" />
+            </div>
+            <h2>Logistics site</h2>
+
+            <p>
+              Created a static landing page for a startup logistics company.
+              With google maps intergration as well as email to provide great
+              customer service. Made it simple to provide a great user
+              experience. Improvements will be made to this website according to
+              the company needs.
+            </p>
+
+            <p>
+              <a href="https://bmklogistics.net/">view website</a>
+            </p>
+          </div>
+        </div>
+
+        <div className="project">
+          <div className="project-info">
+            <div className="project-img">
+              <img src="/images/amazonproject.png" alt="" />
+            </div>
+            <h2>Amazon</h2>
+
+            <p>
+              Simulated the amazon website. This project layed the foundation of
+              working with vanilla javascript. Understanding the basics and made
+              more curious of the posibilities of DOM manipulation. It made me
+              feel in control and wanting to expand my knowledge with
+              javascript.
+            </p>
+
+            <p>
+              <a href="">source code</a>
+            </p>
+          </div>
+        </div>
+
+        <div className="project">
+          <div className="project-info">
+            <div className="project-img">
+              <img src="/images/memory-game.png" alt="" />
+            </div>
+            <h2>Memory game</h2>
+
+            <p>
+              I designed and developed an interactive memory game using React to
+              showcase dynamic state management and smooth UI transitions. It
+              demonstrates my ability to build engaging front-end applications
+              while following modern development practices.
+            </p>
+
+            <a href="https://plum-dotterel-668941.hostingersite.com/">
+              view game
+            </a>
+          </div>
+        </div>
+
+        <div className="project">
+          <div className="project-info">
+            <div className="project-img">
+              <img src="/images/movieapp.png" alt="" />
+            </div>
+            <h2>Movie app</h2>
+
+            <p>
+              Using The Movie Database (TMDB) API, i fetched hundreds of movies
+              and provide great user experince to anyone seeking to find any
+              movies. I used tailwindcss for styling and appwrite database for
+              my trending movies feature as my focus is on front end
+              development.
+            </p>
+
+            <p>
+              <a href="https://lime-zebra-910052.hostingersite.com/">
+                View App
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
