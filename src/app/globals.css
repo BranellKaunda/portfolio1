@@ -9,6 +9,8 @@ body {
 }
 
 .nav-bar {
+  max-width: 100%;
+  padding: 10px;
   border: 1px solid #2e2e2e;
   border-radius: 40px;
   background-color: black;
@@ -38,9 +40,14 @@ body {
   padding: 8px;
 }
 
+.nav-bar button:hover {
+  color: #4169e1;
+  cursor: pointer;
+}
+
 .home-container {
   max-width: 100%;
-  min-height: 500px;
+  min-height: 100vh;
   background: radial-gradient(circle, white 0.2px, #000004 0.5px);
   background-size: 20px 30px; /*try 20px 30px*/
   background-position: center;
@@ -69,12 +76,19 @@ body {
   padding: 10px;
   border-radius: 8px;
   border: none;
+  color: black;
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
   position: relative;
   z-index: 1;
+}
+
+.home-container button:hover {
+  background-color: #1e293b;
+  color: white;
+  cursor: pointer;
 }
 
 .home-container h2 {
@@ -124,7 +138,7 @@ body {
 }
 
 .about-container {
-  margin-top: 40px;
+  margin-top: 80px;
   padding-top: 20px;
   padding-bottom: 20px;
   max-width: 95%;
@@ -134,10 +148,9 @@ body {
 .about-container h1 {
   color: #4169e1;
   font-size: 1.5rem;
-  padding-left: 5px;
-  padding-top: 20px;
   position: relative;
   max-width: max-content;
+  margin: 80px auto;
 }
 
 .about-container h1::after {
@@ -213,6 +226,10 @@ body {
   animation: pulse 1.2s ease-out infinite;
 }
 
+.about-container .about-page-header {
+  margin-top: 50px;
+}
+
 .technologies-container {
   max-width: 90%;
   margin: auto;
@@ -224,16 +241,15 @@ body {
   gap: 3rem;
 }
 
-.technologies-header h1 {
-  margin-top: 80px;
+#technologies-header h1 {
+  margin: 80px auto;
   color: #4169e1;
   font-size: 1.5rem;
   position: relative;
   max-width: max-content;
-  padding-left: 12px;
 }
 
-.technologies-header h1::after {
+#technologies-header h1::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -524,12 +540,11 @@ body {
 }
 
 #projects-header h1 {
-  margin-top: 80px;
+  margin: 80px auto;
   color: #4169e1;
   font-size: 1.5rem;
   position: relative;
   max-width: max-content;
-  padding-left: 12px;
 }
 
 #projects-header h1::after {
@@ -558,7 +573,13 @@ body {
   color: #edc001;
 }
 
-.project .project-info {
+.project-info a:hover {
+  color: #3557b5;
+}
+
+.project:nth-child(1),
+.project:nth-child(3),
+.project:nth-child(5) {
   font-size: 14px;
   font-weight: 300;
   color: white;
@@ -570,9 +591,17 @@ body {
   position: relative;
 }
 
-.project-info a {
-  text-decoration: none;
-  color: #edc001;
+.project:nth-child(2),
+.project:nth-child(4) {
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  padding: 24px;
+  background-image: linear-gradient(to right, transparent, #06060c, #0f0f1a);
+  position: relative;
+  max-width: 100%;
+  min-height: auto;
+  position: relative;
 }
 
 .project-info .project-img {
@@ -586,16 +615,16 @@ body {
   object-fit: cover;
 }
 
-.project .project-info::after {
+/*.project .project-info::after {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
+
   top: 0;
   left: 0;
   transform: translate(-50% -50%);
-  z-index: -1;
-}
+}*/
 
 .footer-container {
   position: relative;
@@ -642,4 +671,133 @@ body {
   right: 50%;
   transform: translate(50%, -72%);
   animation: bounce 2s ease infinite;
+}
+
+@media (min-width: 680px) {
+  .nav-bar {
+    max-width: 80%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .technologies-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 808px) {
+  .technologies-container,
+  .projects-container,
+  .about-container {
+    max-width: 808px;
+    margin: auto;
+  }
+
+  .nav-bar button {
+    font-size: large;
+  }
+
+  .home-container h2 {
+    font-size: large;
+  }
+
+  .home-container h1 {
+    font-size: 2rem;
+  }
+
+  .about-container h1,
+  #technologies-header h1,
+  #projects-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .technologies-container,
+  .projects-container,
+  .about-container {
+    max-width: 1100px;
+    margin: auto;
+  }
+  .nav-bar button {
+    font-size: 1.5rem;
+  }
+
+  .home-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .home-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-container button {
+    font-size: 1rem;
+  }
+
+  .about-container h1,
+  #technologies-header h1,
+  #projects-header h1 {
+    font-size: 3rem;
+    margin-top: 200px;
+  }
+
+  .about-container p {
+    font-size: 1.5rem;
+  }
+
+  .projects-container .project-info,
+  .technologies-container,
+  .footer-container,
+  .about-me .smaller {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 2300px) {
+  .technologies-container,
+  .projects-container,
+  .about-container {
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  .nav-bar button {
+    font-size: 2rem;
+  }
+
+  .home-container h2 {
+    font-size: 2rem;
+  }
+
+  .home-container h1 {
+    font-size: 3rem;
+  }
+
+  .home-container button {
+    font-size: 1.5rem;
+  }
+
+  .about-container h1,
+  #technologies-header h1,
+  #projects-header h1 {
+    font-size: 4rem;
+    margin-top: 200px;
+  }
+
+  .about-container p {
+    font-size: 2rem;
+  }
+
+  .projects-container .project-info,
+  .technologies-container,
+  .footer-container,
+  .about-me .smaller {
+    font-size: 1.8rem;
+  }
 }

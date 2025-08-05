@@ -10,7 +10,7 @@ const Project = () => {
       </div>
       <div className="projects-container">
         <div className="project">
-          <div className="project-info">
+          <div className="project-info ">
             <div className="project-img">
               <img src="/images/bmklogistics.png" alt="" />
             </div>
@@ -46,7 +46,9 @@ const Project = () => {
             </p>
 
             <p>
-              <a href="">source code</a>
+              <a href="https://github.com/BranellKaunda/Amazon-project">
+                source code
+              </a>
             </p>
           </div>
         </div>

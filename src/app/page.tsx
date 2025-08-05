@@ -7,14 +7,11 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRef } from "react";
 
-//import { usePathname } from "next/navigation";
-
 export default function Home() {
   const [greaterThanSign, setGreaterThanSign] = useState("＞");
   //so i can copy and paste the greater than symbolnon my about paragraph
   const targetRef = useRef<HTMLDivElement | null>(null);
   //telling typescript what type im expecting out of useRef
-  //const [projectRef, setProjectRef] = useState('')
 
   const scrollToElement = () => {
     targetRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -62,8 +59,23 @@ export default function Home() {
             >
               branellk@gmail.com
             </a>
-            ' , '<Link href="https://github.com/BranellKaunda">github</Link>', '
-            <Link href="https://www.instagram.com/braneldo">instagram</Link>']
+            ' , '
+            <a
+              href="https://github.com/Branellkaunda"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            ', '
+            <a
+              href="https://instagram.com/braneldo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+            ']
           </p>
 
           <p>
@@ -71,11 +83,20 @@ export default function Home() {
             ['football', 'piano', 'working out', 'video games']
           </p>
 
+          <p>
+            {greaterThanSign}Hi! My name is Branell Kaunda. A junior Front-End
+            Developer that is passionate about crafting sleek, user-friendly web
+            interfaces. I thrive on turning ideas into interactive experiences
+            using modern technologies. My goal is to learn something new
+            everyday when it comes to programming as this will add up the
+            overall skills as a developer.
+          </p>
+
           <p className="typing-symbol">{greaterThanSign}</p>
         </div>
       </div>
 
-      <div className="technologies-header">
+      <div id="technologies-header">
         <h1>Technologies</h1>
       </div>
 
@@ -92,6 +113,7 @@ export default function Home() {
                 width={50}
                 height={50}
                 style={{ objectFit: "cover" }}
+                unoptimized
               />
             </div>
           </div>
@@ -104,6 +126,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -115,6 +138,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -126,6 +150,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -137,6 +162,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
         </div>
@@ -153,6 +179,7 @@ export default function Home() {
                 width={50}
                 height={50}
                 style={{ objectFit: "cover" }}
+                unoptimized
               />
             </div>
           </div>
@@ -165,6 +192,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -176,6 +204,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -187,6 +216,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -198,6 +228,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
         </div>
@@ -214,6 +245,7 @@ export default function Home() {
                 width={50}
                 height={50}
                 style={{ objectFit: "cover" }}
+                unoptimized
               />
             </div>
           </div>
@@ -226,6 +258,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -237,6 +270,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -248,6 +282,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -259,6 +294,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
         </div>
@@ -275,6 +311,7 @@ export default function Home() {
                 width={50}
                 height={50}
                 style={{ objectFit: "cover" }}
+                unoptimized
               />
             </div>
           </div>
@@ -287,6 +324,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -298,6 +336,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -309,6 +348,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -320,6 +360,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
         </div>
@@ -336,6 +377,7 @@ export default function Home() {
                 width={50}
                 height={50}
                 style={{ objectFit: "cover" }}
+                unoptimized
               />
             </div>
           </div>
@@ -348,6 +390,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -359,6 +402,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -370,6 +414,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
 
@@ -381,6 +426,7 @@ export default function Home() {
               width={22}
               height={22}
               style={{ objectFit: "cover" }}
+              unoptimized
             />
           </div>
         </div>
@@ -394,20 +440,53 @@ export default function Home() {
         <div className="project">
           <div className="project-info">
             <div className="project-img">
+              <img src="/images/football-app.png" alt="" />
+            </div>
+            <h2>Productivity app</h2>
+
+            <p>
+              A timer based web app with a mix of fantasy football. Create your
+              ultimate fantasy team while being staying productive. Currently
+              working on a multiplayer feature to compare teams with friends.
+              May the best team win. Made using nextjs, css and rapid api to
+              fetch football data.
+            </p>
+
+            <p>
+              <a
+                href="https://antiquewhite-locust-362914.hostingersite.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View app
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div className="project">
+          <div className="project-info">
+            <div className="project-img">
               <img src="/images/bmklogistics.png" alt="" />
             </div>
             <h2>Logistics site</h2>
 
             <p>
-              Created a static landing page for a startup logistics company.
-              With google maps intergration as well as email to provide great
-              customer service. Made it simple to provide a great user
-              experience. Improvements will be made to this website according to
-              the company needs.
+              Created a static landing page for a startup logistics company
+              using React. With google maps intergration and other features to
+              provide good customer service and even better user experience. .
+              Improvements will be made to this website according to the company
+              needs.
             </p>
 
             <p>
-              <a href="https://bmklogistics.net/">view website</a>
+              <a
+                href="https://bmklogistics.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View website
+              </a>
             </p>
           </div>
         </div>
@@ -428,7 +507,13 @@ export default function Home() {
             </p>
 
             <p>
-              <a href="">source code</a>
+              <a
+                href="https://github.com/BranellKaunda/Amazon-project"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Source code
+              </a>
             </p>
           </div>
         </div>
@@ -447,8 +532,12 @@ export default function Home() {
               while following modern development practices.
             </p>
 
-            <a href="https://plum-dotterel-668941.hostingersite.com/">
-              view game
+            <a
+              href="https://plum-dotterel-668941.hostingersite.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View game
             </a>
           </div>
         </div>
@@ -461,16 +550,20 @@ export default function Home() {
             <h2>Movie app</h2>
 
             <p>
-              Using The Movie Database (TMDB) API, i fetched hundreds of movies
-              and provide great user experince to anyone seeking to find any
-              movies. I used tailwindcss for styling and appwrite database for
-              my trending movies feature as my focus is on front end
-              development.
+              Using The Movie Database (TMDB) API and React, i fetched hundreds
+              of movies and provide great user experince to anyone seeking to
+              find any movies. I used tailwindcss for styling and appwrite
+              database for my trending movies feature as my focus is on front
+              end development.
             </p>
 
             <p>
-              <a href="https://lime-zebra-910052.hostingersite.com/">
-                View App
+              <a
+                href="https://lime-zebra-910052.hostingersite.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View app
               </a>
             </p>
           </div>
