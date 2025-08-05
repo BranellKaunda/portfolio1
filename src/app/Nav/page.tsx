@@ -1,35 +1,31 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import React from "react";
+//import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 const Nav = () => {
-  const [pathChange, setPathChange] = useState(false);
+  //const [pathChange, setPathChange] = useState(false);
   const route = useRouter();
-  const path = usePathname();
+  //const path = usePathname();
 
-  const scroll = () => {
-    const el = document.getElementById("projects-header");
-    el?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToElement = () => {
-    const el = document.getElementById("projects-header");
+  const scrollToElement = (id: string) => {
+    //setPathChange(false);
+    const el = document.getElementById(id);
     el?.scrollIntoView({ behavior: "smooth" });
     //scrooling to element in a different file using the dom
 
-    if (path == "/about") {
+    /*if (path == "/about") {
       setPathChange(true);
       route.push("/");
-    }
+    }*/
   };
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (pathChange) {
-      scroll();
+      scrollToElement();
     }
     //changing path then scrolling to element using the dom
-  });
+  });*/
 
   return (
     <>
@@ -37,9 +33,13 @@ const Nav = () => {
         <div className="btn-div">
           <button onClick={() => route.push("/")}>Home</button>
 
-          <button onClick={scrollToElement}>Projects</button>
+          <button onClick={() => scrollToElement("technologies-header")}>
+            Technologies
+          </button>
 
-          <button onClick={() => route.push("/about")}>About</button>
+          <button onClick={() => scrollToElement("projects-header")}>
+            Projects
+          </button>
         </div>
       </nav>
     </>

@@ -19,7 +19,8 @@ const Footer = () => {
             priority={true}
             width={40}
             height={40}
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "contain" }}
+            unoptimized
           />
         </div>
         <div className="images">
@@ -31,7 +32,8 @@ const Footer = () => {
                 priority={true}
                 width={40}
                 height={40}
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain" }}
+                unoptimized
               />
             </Link>
           </div>
@@ -44,7 +46,8 @@ const Footer = () => {
                 priority={true}
                 width={40}
                 height={40}
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain" }}
+                unoptimized
               />
             </Link>
           </div>
@@ -61,13 +64,14 @@ const Footer = () => {
                 priority={true}
                 width={40}
                 height={40}
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain" }}
+                unoptimized
               />
             </a>
           </div>
         </div>
 
-        <p>Branell Kaunda ©2025</p>
+        <p>Branell Kaunda</p>
       </div>
     </>
   );
