@@ -430,6 +430,72 @@ export default function Home() {
             />
           </div>
         </div>
+
+        <div className="technologies-6">
+          <div className="tech-wrapper">
+            <h2>PostgreSQL</h2>
+
+            <div className="img-div">
+              <Image
+                src="/images/postgresql.png"
+                alt="react logo"
+                priority={true}
+                width={50}
+                height={50}
+                style={{ objectFit: "cover" }}
+                unoptimized
+              />
+            </div>
+          </div>
+
+          <div className="plus-1">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+              unoptimized
+            />
+          </div>
+
+          <div className="plus-2">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+              unoptimized
+            />
+          </div>
+
+          <div className="plus-3">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+              unoptimized
+            />
+          </div>
+
+          <div className="plus-4">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+              unoptimized
+            />
+          </div>
+        </div>
       </div>
 
       <div id="projects-header">

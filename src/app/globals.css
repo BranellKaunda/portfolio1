@@ -483,6 +483,30 @@ body {
   transform: translate(-50%, 60%);
 }
 
+.technologies-container .technologies-6 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  border: 1px solid #2e2e2e;
+  padding: 16px;
+}
+
+.technologies-6 .tech-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.technologies-6 .tech-wrapper h2 {
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .technologies-container .technologies-5 {
   position: relative;
   display: grid;
