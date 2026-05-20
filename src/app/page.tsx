@@ -496,6 +496,138 @@ export default function Home() {
             />
           </div>
         </div>
+
+        <div className="technologies-7">
+          <div className="tech-wrapper">
+            <h2>Vue</h2>
+
+            <div className="img-div">
+              <Image
+                src="/images/vue.png"
+                alt="react logo"
+                priority={true}
+                width={50}
+                height={50}
+                style={{ objectFit: "cover" }}
+                unoptimized
+              />
+            </div>
+          </div>
+
+          <div className="plus-1">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+              unoptimized
+            />
+          </div>
+
+          <div className="plus-2">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+              unoptimized
+            />
+          </div>
+
+          <div className="plus-3">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+              unoptimized
+            />
+          </div>
+
+          <div className="plus-4">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+              unoptimized
+            />
+          </div>
+        </div>
+
+        <div className="technologies-8">
+          <div className="tech-wrapper">
+            <h2>Nuxt</h2>
+
+            <div className="img-div">
+              <Image
+                src="/images/nuxt.png"
+                alt="react logo"
+                priority={true}
+                width={50}
+                height={50}
+                style={{ objectFit: "cover" }}
+                unoptimized
+              />
+            </div>
+          </div>
+
+          <div className="plus-1">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+              unoptimized
+            />
+          </div>
+
+          <div className="plus-2">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+              unoptimized
+            />
+          </div>
+
+          <div className="plus-3">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+              unoptimized
+            />
+          </div>
+
+          <div className="plus-4">
+            <Image
+              src="/images/plus.png"
+              alt="instagram icon"
+              priority={true}
+              width={22}
+              height={22}
+              style={{ objectFit: "cover" }}
+              unoptimized
+            />
+          </div>
+        </div>
       </div>
 
       <div id="projects-header">
@@ -534,6 +666,43 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 Source code
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div className="project">
+          <div className="project-info">
+            <div className="project-img">
+              <img src="/images/football-platform.png" alt="" />
+            </div>
+            <h2>Data & Management platform</h2>
+
+            <p>
+              I am creating a digital platform designed to modernize how
+              football is managed in grassroot areas. It lets officials register
+              players, record match data, track youth development, and keep
+              clean historical records—all in one place. Built to reduce
+              paperwork and improve accuracy, making management fully digital.
+            </p>
+
+            <p>
+              <a
+                href="https://github.com/BranellKaunda/football-backend"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Backend code
+              </a>
+            </p>
+
+            <p>
+              <a
+                href="https://github.com/BranellKaunda/football-front"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Frontend code
               </a>
             </p>
           </div>
@@ -606,33 +775,6 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 source code
-              </a>
-            </p>
-          </div>
-        </div>
-
-        <div className="project">
-          <div className="project-info">
-            <div className="project-img">
-              <img src="/images/bmklogistics.png" alt="" />
-            </div>
-            <h2>Logistics site</h2>
-
-            <p>
-              Created a static landing page for a startup logistics company
-              using React. With google maps intergration and other features to
-              provide good customer service and even better user experience. .
-              Improvements will be made to this website according to the company
-              needs.
-            </p>
-
-            <p>
-              <a
-                href="https://bmklogistics.net/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View website
               </a>
             </p>
           </div>
