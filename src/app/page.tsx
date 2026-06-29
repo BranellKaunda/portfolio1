@@ -674,7 +674,7 @@ export default function Home() {
         <div className="project">
           <div className="project-info">
             <div className="project-img">
-              <img src="/images/football-platform.png" alt="" />
+              <img src="/images/football-data.png" alt="" />
             </div>
             <h2>Data & Management platform</h2>
 
@@ -688,21 +688,21 @@ export default function Home() {
 
             <p>
               <a
-                href="https://github.com/BranellKaunda/football-backend"
+                href="https://football-data-management-app.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Backend code
+                View app
               </a>
             </p>
 
             <p>
               <a
-                href="https://github.com/BranellKaunda/football-front"
+                href="https://github.com/BranellKaunda/football-data-management-app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Frontend code
+                Source code
               </a>
             </p>
           </div>
