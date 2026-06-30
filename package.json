@@ -4,30 +4,20 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "export": "next export"
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.3.0",
-    "@vercel/analytics": "^1.6.1",
-    "next": "^15.5.12",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-scroll": "^1.9.3",
-    "tailwindcss": "^4.3.0"
+    "@tailwindcss/vite": "^4.3.2",
+    "nuxt": "4.2.2",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^4.3.2",
+    "vue": "latest",
+    "vue-router": "latest"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/node": "^20.19.40",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "autoprefixer": "^10.5.0",
-    "eslint": "^9",
-    "eslint-config-next": "15.4.4",
-    "postcss": "^8.5.15",
     "typescript": "^5.9.3"
   }
 }
