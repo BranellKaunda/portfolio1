@@ -350,7 +350,55 @@ const projects = [
       </div>
     </section>
 
-    <!-- Row 5: CTA (col-span-2) -->
+    <!-- Row 5: Blog (col-span-2) -->
+    <section
+      id="blog"
+      class="border-b border-purple-500/10 px-8 py-16 lg:col-span-2 lg:px-16"
+    >
+      <div class="mb-10 text-center">
+        <p
+          class="text-sm font-semibold uppercase tracking-widest text-purple-400"
+        >
+          Writing
+        </p>
+        <h2 class="mt-2 text-3xl font-bold text-white lg:text-4xl">Blog</h2>
+      </div>
+      <div class="mx-auto max-w-4xl">
+        <article
+          class="flex flex-col overflow-hidden rounded-md border border-purple-500/10 bg-surface lg:flex-row"
+        >
+          <div class="lg:w-1/3">
+            <img
+              src="/MadvueStaff.jpg"
+              alt="MadVue Staff"
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <div class="flex flex-col justify-center p-6 lg:w-2/3 lg:p-8">
+            <div class="mb-3 flex items-center gap-3 text-xs text-gray-500">
+              <span class="text-purple-400">Vue</span>
+              <span>·</span>
+              <time>June 30, 2026</time>
+            </div>
+            <h3 class="text-xl font-semibold text-white">MadVue 2026</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-400">
+              This year i attended my first vue conference in Madrid - an
+              experience i want to relive over and over again.
+            </p>
+            <div class="mt-4 flex gap-4 text-sm">
+              <NuxtLink
+                to="/blog"
+                class="font-medium text-purple-400 transition-colors hover:text-purple-300"
+              >
+                Read more →
+              </NuxtLink>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Row 6: CTA (col-span-2) -->
     <section id="contact" class="px-8 py-20 text-center lg:col-span-2 lg:px-16">
       <h2 class="text-4xl font-bold text-white">Let's work together</h2>
       <p class="mt-4 text-lg text-gray-400">
