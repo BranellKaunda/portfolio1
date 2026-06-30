@@ -123,23 +123,23 @@ const projects = [
           <p>
             > <span class="text-purple-400">Branell</span>.location
             <span class="text-gray-500">=</span>
-            <span class="text-emerald-400">'Alcoy, Spain'</span>
+            <span class="text-gray-400">'Alcoy, Spain'</span>
           </p>
           <p>
             > <span class="text-purple-400">Branell</span>.contact
             <span class="text-gray-500">=</span> ['<a
               href="mailto:branellk@gmail.com"
-              class="text-cyan-400 underline"
+              class="text-purple-300 underline decoration-purple-500/30 underline-offset-2 transition-colors hover:text-purple-200"
               >branellk@gmail.com</a
             >' , '<a
               href="https://github.com/Branellkaunda"
               target="_blank"
-              class="text-cyan-400 underline"
+              class="text-purple-300 underline decoration-purple-500/30 underline-offset-2 transition-colors hover:text-purple-200"
               >GitHub</a
             >' , '<a
               href="https://instagram.com/braneldo"
               target="_blank"
-              class="text-cyan-400 underline"
+              class="text-purple-300 underline decoration-purple-500/30 underline-offset-2 transition-colors hover:text-purple-200"
               >Instagram</a
             >']
           </p>
