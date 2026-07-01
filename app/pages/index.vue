@@ -397,43 +397,8 @@ const projects = [
       </div>
     </section>
 
-    <!-- Row 6: CTA (col-span-2) -->
-    <section id="contact" class="px-8 py-20 text-center lg:col-span-2 lg:px-16">
-      <h2 class="text-4xl font-bold text-white">Let's work together</h2>
-      <p class="mt-4 text-lg text-gray-400">
-        Have a project in mind? Let's build something great.
-      </p>
-      <a
-        href="mailto:branellk@gmail.com"
-        class="mt-8 inline-block rounded-full bg-purple-600 px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-purple-500"
-      >
-        Get in touch →
-      </a>
-      <div class="mt-12 flex items-center justify-center gap-6">
-        <a
-          v-for="s in socials"
-          :key="s.label"
-          :href="s.url"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-gray-500 transition-colors hover:text-purple-400"
-          :title="s.label"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="22"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path :d="s.icon" />
-          </svg>
-        </a>
-      </div>
-      <p class="mt-12 text-sm text-gray-600">
-        &copy; {{ new Date().getFullYear() }} Branell Kaunda. All rights
-        reserved.
-      </p>
-    </section>
+    <div class="lg:col-span-2">
+      <ContactSection />
+    </div>
   </main>
 </template>

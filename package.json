@@ -1,5 +1,5 @@
 {
-  "name": "portfolio1",
+  "name": "portfolio",
   "version": "0.1.0",
   "type": "module",
   "private": true,
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
+    "lightningcss": "^1.32.0",
     "nuxt": "4.2.2",
     "postcss": "^8.5.16",
     "tailwindcss": "^4.3.2",
@@ -19,5 +20,8 @@
   },
   "devDependencies": {
     "typescript": "^5.9.3"
+  },
+  "optionalDependencies": {
+    "@rolldown/binding-win32-x64-msvc": "^1.1.4"
   }
 }

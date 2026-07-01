@@ -100,7 +100,7 @@ useHead({
             rel="noopener noreferrer"
             class="transition-colors hover:text-purple-400"
             >Juan Andrés Núñez</a
-          >, Eduardo San Martín to name a few. These are the ones of them really
+          >, Eduardo San Martín to name a few. These are the ones that really
           stuck with me.
         </p>
 
@@ -196,4 +196,7 @@ useHead({
       </div>
     </article>
   </main>
+  <div class="border-t border-purple-500/10">
+    <ContactSection />
+  </div>
 </template>

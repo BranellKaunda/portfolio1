@@ -72,4 +72,7 @@ useHead({
       </div>
     </section>
   </main>
+  <div class="border-t border-purple-500/10">
+    <ContactSection />
+  </div>
 </template>

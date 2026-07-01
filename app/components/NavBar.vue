@@ -22,9 +22,11 @@ function close() {
     class="sticky top-0 z-50 border-b border-purple-500/10 bg-canvas/80 backdrop-blur-xl"
   >
     <div
-      class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:justify-center"
+      class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
     >
-      <a href="/" class="text-lg font-bold text-white lg:hidden">Branell</a>
+      <a href="/" class="text-2xl font-bold">
+        <span class="text-white">&lt;</span><span class="text-purple-400">Br</span><span class="text-white">&gt;</span>
+      </a>
 
       <ul
         class="hidden items-center gap-8 text-base font-medium text-gray-400 lg:flex"
