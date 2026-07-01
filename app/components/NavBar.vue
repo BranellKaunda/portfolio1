@@ -3,10 +3,11 @@ import { ref } from "vue";
 
 const links = [
   { label: "Home", href: "/" },
-  { label: "Technologies", href: "#technologies" },
-  { label: "Projects", href: "#projects" },
+  { label: "About", href: "/about" },
+  { label: "Technologies", href: "/#technologies" },
+  { label: "Projects", href: "/#projects" },
   /* { label: "Blog", href: "/blog" }, */
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const mobileOpen = ref(false);

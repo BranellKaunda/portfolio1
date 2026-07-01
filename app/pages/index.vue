@@ -32,8 +32,8 @@ const experience = [
   {
     period: "2025 — 2026",
     role: "Front-End Developer",
-    company: "BMK Logistics",
-    desc: "Developing and maintaining responsive web interfaces, ensuring seamless user experiences across the logistics platform.",
+    company: "Freelance",
+    desc: "Developing and maintaining responsive web applications across multiple platforms.",
   },
 ];
 
@@ -119,7 +119,7 @@ const projects = [
             Branell Kaunda
           </span>
         </h1>
-        <div class="mt-6 space-y-2 text-left font-mono text-sm text-gray-400">
+        <!-- <div class="mt-6 space-y-2 text-left font-mono text-sm text-gray-400">
           <p>
             > <span class="text-purple-400">Branell</span>.location
             <span class="text-gray-500">=</span>
@@ -148,11 +148,10 @@ const projects = [
             <span class="text-gray-500">=</span> ['football', 'piano', 'working
             out', 'video games']
           </p>
-        </div>
+        </div> -->
         <p class="mt-6 max-w-lg text-base leading-relaxed text-gray-400">
-          A junior Front-End Developer passionate about crafting sleek,
-          user-friendly web interfaces. I thrive on turning ideas into
-          interactive experiences using modern technologies.
+          I am a junior front-end developer exploring the possibilities of web
+          applications. Building, Failing and Learning — that's the fun part.
         </p>
         <div
           class="mt-8 flex items-center justify-center gap-5 lg:justify-start"

@@ -5,7 +5,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/globals.css"],
   nitro: {
-    preset: "vercel",
+    externals: {
+      inline: ["vue-bundle-renderer"],
+    },
   },
   vite: {
     plugins: [tailwindcss()],
